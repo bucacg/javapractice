@@ -1,3 +1,6 @@
+
+//lalalala
+
 package practice;
 
 public class SquareEquation {
