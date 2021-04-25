@@ -20,7 +20,7 @@ package practice.People.CompanySalary;
         }
         //重写earnings()方法。
     }
-class dayWorker extends Employee {
+class DayWorker extends Employee {
     public double earnings() {
         return 100;
     }
@@ -44,13 +44,13 @@ class dayWorker extends Employee {
         public static void main(String args[]) {
             Employee [] employee=new Employee[29]; //公司有29名雇员
             for(int i=0;i<employee.length;i++) {   //雇员简单地分成三类
-                if(i%3==0)
+                if(i%4==0)
+                    employee[i]=new DayWorker();
+                else if(i%4==1)
                     employee[i]=new WeekWorker();
-                else if(i%3==1)
+                else if(i%4==2)
                     employee[i]=new MonthWorker();
-                else if(i%3==2)
-                    employee[i]=new YearWorker();
-                else if(i==1)
+                else if(i%4==3)
                     employee[i]=new YearWorker();
             }
             Company company=new Company(employee);
