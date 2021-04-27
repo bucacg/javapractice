@@ -1,5 +1,7 @@
 package think.polymorphism.music.Cycle;
 
-public class Tricycle extends Cycle{
-     System.out.println("Tricycle");
+public class Tricycle extends Cycle {
+     public void play(){
+          System.out.println("Tricycle");
+     }
 }
