@@ -3,6 +3,7 @@ package think.polymorphism.music.Cycle;
 public class Ride {
     public static void ride(Cycle cycle){
         cycle.play();
+        cycle.wheels();
     }
     public static void main(String[]args){
         Unicycle unicycle=new Unicycle();
