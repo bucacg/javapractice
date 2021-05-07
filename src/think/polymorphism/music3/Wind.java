@@ -5,10 +5,12 @@ import think.polymorphism.music.Note;
 import static net.mindview.util.Print.print;
 
 class Wind extends Instrument{
-    void play(Note n){
-        print("Wind.play()"+n);}
-    public String toString(){
-        return "Wind";}
-    void adjust(){
-        print("Adjust Wind");}
-}
+        //重写接口方法
+        public void play(Note n){
+            System.out.println("Wind.play()"+n);
+        }
+        String what() {
+            return "Wind"; }
+        void adjust() {
+            System.out.println("Adjusting Wind"); }
+    }

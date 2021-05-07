@@ -3,29 +3,14 @@ package think.polymorphism.music3;
 import think.polymorphism.music.Note;
 
 public class Music3 {
-    private static boolean instrucment;
+        public static void tune(Instrument i){
+            i.play(Note.MIDDLE_C);
+        }
 
-    public static void tune(Instrument i){
-        i.play(Note.B_FLAT);
-    }
-    public static void tuneAll(Instrument e[]){
-        for(Instrument i:e){
-            tune(i);
+        public static void main(String args[]){
+            Wind flute=new Wind();
+            tune(flute);  //向上转型
+            newInstrument ni = new newInstrument();
+            ni.play(Note.B_FLAT);//验证多态性是否适用于所添加的新类型，答案是确实适用。
         }
     }
-    public static void main(String args[]){
-        Instrument orchestra[]={
-                new Wind(),
-                new Percussion(),
-                new Stringed(),
-                new Brass(),
-                new WoodWind()
-        };
-        for(Instrument instrument:orchestra){
-            instrument.play(Note.C_SHARP);
-            instrument.adjust();
-            System.out.println(instrucment);
-        }
-        tuneAll(orchestra);
-    }
-}

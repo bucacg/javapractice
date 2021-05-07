@@ -4,14 +4,16 @@ import think.polymorphism.music.Note;
 
 import static net.mindview.util.Print.print;
 
-class Instrument {
+public class Instrument {
     void play(Note n){
-        print("Instrument.play()"+n);
+        System.out.print("Instrument.play()"+n);
     }
-    public String toString (){
-        return "Instrument";
+    String What() {
+        return "Instrument"; }
+    void adjust() {
+        System.out.println("Adjusting Instrument");
     }
-    void adjust(){
-        print("Adjusting Instrument");
+    public String toString(){
+        return What();
     }
 }
